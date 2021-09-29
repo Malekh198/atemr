@@ -1,0 +1,89 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "Username": "jrisborough0",
+      "FirstName": "Janie",
+      "LastName": "Risborough",
+      "RolesCount": 1,
+      "Roles": [
+        {
+          "id": 1,
+          "roleName": "Construction Expeditor"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "Username": "fhinzer1",
+      "FirstName": "Francesco",
+      "LastName": "Hinzer",
+      "RolesCount": 1,
+      "Roles": [
+        {
+          "id": 2,
+          "roleName": "Supervisor"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "Username": "dmccay2",
+      "FirstName": "Derril",
+      "LastName": "McCay",
+      "RolesCount": 2,
+      "Roles": [
+        {
+          "id": 2,
+          "roleName": "Supervisor"
+        },
+        {
+          "id": 3,
+          "roleName": "Estimator"
+        }
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "RoleName": "Construction Expeditor",
+      "RoleDescription": "Detect and troubleshoot issues with delivery of orders",
+      "NumberofUsers": 1,
+      "ListOfUsers": [
+        {
+          "id": 1,
+          "name": "Janie"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "RoleName": "Supervisor",
+      "RoleDescription": "Organizing workflow and ensuring that employees understand their duties or delegated tasks",
+      "NumberofUsers": 2,
+      "ListOfUsers": [
+        {
+          "id": 2,
+          "name": "Francesco"
+        },
+        {
+          "id": 3,
+          "name": "Derril"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "RoleName": "Estimator",
+      "RoleDescription": "esponsible for estimating the costs of a planned construction project",
+      "NumberofUsers": 1,
+      "ListOfUsers": [
+        {
+          "id": 3,
+          "name": "Derril"
+        }
+      ]
+    }
+  ]
+}

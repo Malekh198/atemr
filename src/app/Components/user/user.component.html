@@ -1,0 +1,54 @@
+<ion-grid>
+  <ion-card>
+    <ion-card>
+      <ion-col class="ion-align-items-center">USERS</ion-col>
+    </ion-card>
+    <ion-card>
+      <ion-row class="header-row">
+        <ion-col size="2" [ngStyle]="{ border: 'black 2px solid' }">
+          ID
+        </ion-col>
+        <ion-col size="2" [ngStyle]="{ border: 'black 2px solid' }">
+          UserName
+        </ion-col>
+        <ion-col size="2" [ngStyle]="{ border: 'black 2px solid' }">
+          FirstName
+        </ion-col>
+        <ion-col size="2" [ngStyle]="{ border: 'black 2px solid' }">
+          LastName
+        </ion-col>
+        <ion-col size="2" [ngStyle]="{ border: 'black 2px solid' }">
+          RoleCount
+        </ion-col>
+        <ion-col size="2" [ngStyle]="{ border: 'black 2px solid' }">
+          Roles
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card *ngFor="let user of users">
+      <ion-row>
+        <ion-col size="2" [ngStyle]="{ border: 'black 2px solid' }">{{
+          user.id
+        }}</ion-col>
+        <ion-col size="2" [ngStyle]="{ border: 'black 2px solid' }">{{
+          user.Username
+        }}</ion-col>
+        <ion-col size="2" [ngStyle]="{ border: 'black 2px solid' }">{{
+          user.FirstName
+        }}</ion-col>
+        <ion-col size="2" [ngStyle]="{ border: 'black 2px solid' }">{{
+          user.LastName
+        }}</ion-col>
+        <ion-col size="2" [ngStyle]="{ border: 'black 2px solid' }">{{
+          user.RolesCount
+        }}</ion-col>
+        <ion-col size="2" [ngStyle]="{ border: 'black 2px solid' }">
+          <div *ngFor="let role of user.Roles">
+            {{ role.roleName }}
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-card>
+</ion-grid>

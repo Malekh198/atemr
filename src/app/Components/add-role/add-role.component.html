@@ -1,0 +1,56 @@
+<form *ngIf="showAddRole" class="add-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <ion-item>
+      <ion-label for="RoleName" position="floating">Role Name</ion-label>
+      <ion-input
+        type="text"
+        name="RoleName"
+        [(ngModel)]="RoleName"
+        id="text"
+        placeholder="Add Text"
+      ></ion-input>
+    </ion-item>
+  </div>
+  <div class="form-control">
+    <ion-item>
+      <ion-label for="RoleDescription" position="floating"
+        >Role Description</ion-label
+      >
+      <ion-input
+        type="text"
+        name="RoleDescription"
+        [(ngModel)]="RoleDescription"
+        id="Text"
+        placeholder="Add Role Description"
+      ></ion-input>
+    </ion-item>
+  </div>
+  <div class="form-control">
+    <ion-item>
+      <ion-label for="NumberofUsers" position="floating"
+        >Number of Users</ion-label
+      >
+      <ion-input
+        type="number"
+        name="NumberofUsers"
+        [(ngModel)]="NumberofUsers"
+        id="text"
+        placeholder="Add Number of Users"
+      ></ion-input>
+    </ion-item>
+  </div>
+  <div class="form-control">
+    <ion-item>
+      <ion-label for="ListOfUsers" position="floating">List of Users</ion-label>
+      <ion-input
+        type="text"
+        name="ListOfUsers"
+        [(ngModel)]="ListOfUsers"
+        id="text"
+        placeholder="Add List of Users"
+      ></ion-input>
+    </ion-item>
+  </div>
+  {{ ListOfUsers }}
+  <ion-button type="submit">Submit</ion-button>
+</form>

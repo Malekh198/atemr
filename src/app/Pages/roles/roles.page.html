@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Roles Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <ion-button routerLink="/home">Go to Users</ion-button>
+    <app-button
+      *ngIf="hasRoute('/roles')"
+      text="{{ showAddRole ? 'Close' : 'Add' }}"
+      (btnClick)="toggleAddRole()"
+    ></app-button>
+  </div>
+  <app-add-role (onAddRole)='addRole($event)'></app-add-role>
+  <app-role></app-role>
+</ion-content>

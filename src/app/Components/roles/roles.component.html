@@ -1,0 +1,46 @@
+<ion-content class="ion-padding">
+  <div id="faq">
+    <ul *ngFor="let role of roles">
+      <li>
+        <ion-button
+          (click)="deleteRole(role)"
+          shape="round"
+          size="small"
+          fill="outline"
+          color="danger"
+          >Delete</ion-button
+        >
+        <input type="checkbox" checked />
+        <!-- <i></i> -->
+        <h2>{{ role.RoleName }}</h2>
+        <h3>{{ role.RoleDescription }}</h3>
+        <h3>Number of Users: {{ role.NumberofUsers }}</h3>
+        <div>
+          Users:
+          <ion-label *ngFor="let user of role.ListOfUsers">
+            {{ user.name }}
+            <ion-button
+              (click)="unassignUser(role)"
+              shape="round"
+              size="small"
+              fill="outline"
+            >
+              Unassign
+            </ion-button>
+          </ion-label>
+        </div>
+      </li>
+      <div>
+        <ion-item>
+          <ion-label> Please Select a User</ion-label>
+          <ion-select>
+            <ion-select-option *ngFor="let user of users"> {{ user.FirstName }}</ion-select-option>
+          </ion-select>
+          <ion-button shape="round" size="small" fill="outline"
+            >Assign</ion-button
+          >
+        </ion-item>
+      </div>
+    </ul>
+  </div>
+</ion-content>
